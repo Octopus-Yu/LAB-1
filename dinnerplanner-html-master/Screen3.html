@@ -13,129 +13,161 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-    <!-- Place your stylesheet here-->
-<!--    <link href="stylesheet.css" rel="stylesheet" type="text/css">-->
+
     <link href="XYYCSS.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
+
     <div class="p-2 text-center" style="background-color: lightgrey">
         <h1>Dinner Planner</h1>
     </div>
- <div id="interfaceView3">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-3" style="float: left">
-                <h3>
-                    My Dinner
-                </h3>
-                <div class="container-fluid" style="float: left">
-                    <span class="badge badge-default">People
 
-                    </span>
-                    <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
-                            3
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item disabled" href="#">1</a> <a class="dropdown-item" href="#">2</a>
+    <div id="interfaceView3">
+        <div class="container-fluid">
+            <div class="row">
+
+
+
+                <div class="col-md-3" style="float: left">
+                    <!--         hide when using mobile phone      /-->
+                    <div class=" d-none d-sm-block">
+                        <h3>
+                            My Dinner
+                        </h3>
+                        <div class="container-fluid" style="float: left">
+                            <span class="badge badge-default">People
+                            </span>
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item disabled" href="#">1</a> <a class="dropdown-item" href="#">2</a>
+                                </div>
+                            </div>
                         </div>
+                        <table class="table table-sm" id="tablemenu">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Dish Name
+                                    </th>
+                                    <th>
+                                        Cost
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                        <p style="float: right" id="totalprice">SEK 6.0 </p>
+                        <button type="button" class="btn btn-block btn-primary">
+                            Confirm Dinner
+                        </button>
                     </div>
+
+
+                    <div class="d-block d-sm-none">
+                        <!-- for mobile web -->
+                        <nav class="navbar navbar-fixed-top">
+
+                            <a class="navbar-brand">My Dinner</a>
+
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" style="float: right">
+
+                                <span class="icon-bar">
+
+                                </span>
+
+                            </button>
+
+
+                            <div id="navbar" class="navbar-collapse collapse">
+                                
+                                
+                                <ul class="nav navbar-nav">
+                                    <div class="container-fluid" style="float: left">
+                                        <span class="badge badge-default">People
+                                        </span>
+                                        <div class="dropdown">
+                                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButtonMobile" data-toggle="dropdown">
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item disabled" href="#">1</a> <a class="dropdown-item" href="#">2</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <table class="table table-sm" id="tablemenuMobile">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    Dish Name
+                                                </th>
+                                                <th>
+                                                    Cost
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                    <p style="float: right" id="totalpriceMobile">SEK 6.0 </p>
+                                    <button type="button" class="btn btn-block btn-primary">
+                                        Confirm Dinner
+                                    </button>
+                                </ul>
+                                
+                                
+                            </div>
+
+                        </nav>
+
+
+
+
+                    </div>
+
+
+
                 </div>
 
 
-                <table class="table table-sm" id="tablemenu"> 
-<!--                  <span id="numberOfGuests"> </span>-->
 
-                    <thead>
-                        <tr>
-                            <th>
-                                Dish Name
-                            </th>
-                            <th>
-                                Cost
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-<!--
-                        <tr>
-                            <td>
-                                 
-                            </td>
-                            <td>
-                                6
-                            </td>
-                        </tr>
--->
-                    </tbody>
 
-                    
-         
-                    
-                </table>
-                <p style="float: right" id="totalprice" >SEK 6.0 </p>
-                <button type="button" class="btn btn-block btn-primary">
-                    Confirm Dinner
-                </button>
-            </div>
-            <div class="col-md-9" style="width: 100%">
 
-                <h3 style="float: left my-3">
-                    Find A Dish
-                </h3>
-                <form role="form" class="form-inline" style="float: left">
-                    <div class="form-group px-2">
-                        <input type="searchlabel" class="form-control" id="searchlabel" placeholder="Enter Key Words" />
-                    </div>
-                    <select id="selectmenu" class="form-control">
-                        <option selected>All</option>
-                        <option>Main Course</option>
-                        <option>Side Dish</option>
-                    </select>
-                    <button type="search" class="btn btn-primary mx-2">
-                        Search
-                    </button>
-                </form>
-                <p class="p-4"></p>
 
-                <div class="row">
-                    <div class="card mx-2" style="width: 18rem;">
-                        <img src="images/bakedbrie.jpg" class="card-img-top" style="height: 100%">
-                        <div class="card-body">
-                            <p class="card-text text-center">Baked brie</p>
-                        </div>
-                    </div>
-                    <div class="card mx-2" style="width: 18rem;">
-                        <img src="images/icecream.jpg" class="card-img-top">
-                        <div class="card-body">
-                            <p class="card-text text-center">Ice cream</p>
-                        </div>
-                    </div>
-                    <div class="card mx-2" style="width: 18rem;">
-                        <img src="images/meatballs.jpg" class="card-img-top">
-                        <div class="card-body">
-                            <p class="card-text text-center">Meat balls</p>
-                        </div>
-                    </div>
-                    <div class="card mx-2" style="width: 18rem;">
-                        <img src="images/sourdough.jpg" class="card-img-top">
-                        <div class="card-body">
-                            <p class="card-text text-center">Sour dough</p>
-                        </div>
-                    </div>
-                    <div class="card mx-2" style="width: 18rem;">
-                        <img src="images/toast.jpg" class="card-img-top">
-                        <div class="card-body">
-                            <p class="card-text text-center">Toast</p>
-                        </div>
-                    </div>
 
+
+
+
+                <div class="col-md-9" style="width: 100%">
+
+                    <h3 style="float: left my-3">
+                        Find A Dish
+                    </h3>
+                    <form role="form" class="form-inline" style="float: left">
+                        <div class="form-group px-2">
+                            <input type="searchlabel" class="form-control" id="searchlabel" placeholder="Enter Key Words" />
+                        </div>
+                        <select id="selectmenu" class="form-control">
+                            <option selected>All</option>
+                            <option>Main Course</option>
+                            <option>Side Dish</option>
+                        </select>
+                        <button type="search" class="btn btn-primary mx-2">
+                            Search
+                        </button>
+                    </form>
+                    <p class="p-4"></p>
+
+                    <div class="row" id=dishDetail style="float: left">
+
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-     </div>
 
 
     <!-- Bootstrap core JavaScript
@@ -145,9 +177,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
+    <script src="js/view/SidebarView.js"></script>
+    <script src="js/view/DishitemView.js"></script>
     <script src="js/app.js"></script>
     <script src="js/model/dinnerModel.js"></script>
     <script src="js/view/interfaceView3.js"></script>
+
 
 </body>
 

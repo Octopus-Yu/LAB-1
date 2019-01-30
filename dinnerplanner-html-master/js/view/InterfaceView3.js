@@ -2,48 +2,38 @@ var InterfaceView3 = function (container, model) {
 
 
     //var numberOfGuests = container.find("#numberOfGuests");
+    this.dishDetail = document.getElementById("dishDetail");
     this.tablemenu = container.find("#tablemenu");
     this.totalMenuPrice = container.find("#totalprice");
     this.customernum = container.find("#dropdownMenuButton")
-//    for (var i = 0; i < 3; i++) {
-//        var tr = tablemenu.insertRow();
-//        //for(var j = 0; j < 2; j++){
-//
-//        var td = tr.insertCell();
-//        td.innerHTML = model.menu[i].name;
-//        
-//        var td = tr.insertCell();
-//        td.innerHTML = model.getDishPrice(i);
-     for (let dsh of model.menu) {
-        var tr = tablemenu.insertRow();
-        //for(var j = 0; j < 2; j++){
+    var sidebarView = new SidebarView(this.tablemenu[0], model);
 
-        var td1 = tr.insertCell();
-        td1.innerHTML = dsh.name;
-        
-        var td2 = tr.insertCell();
-        td2.innerHTML = model.getDishPrice(dsh.id);
+    this.totalMenuPrice.text("SEK: " + sidebarView.price + " ");
+    this.customernum.text(sidebarView.people);
 
+
+    for (let dsh of model.menu) {
+        var dishitemView = new DishitemView(dsh.id, model);
+        var div = dishitemView.div;
+        this.dishDetail.appendChild(div);
 
     }
-    var price = 0;
-    price = model.getTotalMenuPrice();
-    //alert(price);
-    this.totalMenuPrice.text("SEK: "+price+" ");
-    alert(model.customers[0].customernum);
-    var people = model.customers[0].customernum;
-    this.customernum.text(people);
 
 
 
 
-    //    table.rowIndex = model.menu.length;
-   
-    //numberOfGuests.text("test");
-    //numberOfGuests.text(model.menu.getElementById[1].name);
-    // numberOfGuests.text("3");
+    // For mobile view:
 
-    //    numberOfGuests.html("3");
-    //    var test = container.find("#test");
-    //    test.html("testtest");
+    this.tablemenuMobile = container.find("#tablemenuMobile");
+    this.totalMenuPriceMobile = container.find("#totalpriceMobile");
+    this.customernumMobile = container.find("#dropdownMenuButtonMobile")
+    var sidebarViewMobile = new SidebarView(this.tablemenuMobile[0], model);
+
+    this.totalMenuPriceMobile.text("SEK: " + sidebarView.price + " ");
+    this.customernumMobile.text(sidebarView.people);
+
+
+
+
+
 }

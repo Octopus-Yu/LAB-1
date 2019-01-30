@@ -3,9 +3,14 @@ $(function () {
     var model = new DinnerModel();
 
     // And create the instance of ExampleView
-//    var exampleView = new ExampleView($("#exampleView"), model);
-//   var interfaceView1 = new InterfaceView1($("#interfaceView1"), model);
+    //    var exampleView = new ExampleView($("#exampleView"), model);
+
+    //var interfaceView2 = new InterfaceView2($("#interfaceView2"), model);
+
+
     var interfaceView3 = new InterfaceView3($("#interfaceView3"), model);
+    //var interfaceView4 = new InterfaceView4($("#interfaceView4"), model);
+    // var interfaceView5 = new InterfaceView5($("#interfaceView5"), model);
 
     /**
      * IMPORTANT: app.js is the only place where you are allowed to
