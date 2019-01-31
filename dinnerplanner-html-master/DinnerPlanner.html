@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" style="height:100%">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Xiaoyun_Yu Lab1</title>
+
+    <!--font style-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="XYYCSS.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="DinnerPlannerView">
+
+
+        <!--For Web Top Title-->
+        <!--
+        <div class="p-2 text-center" style="background-color: lightgrey">
+            <h1>Dinner Planner</h1>
+        </div>
+-->
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+
+                    <h1 class="display-4">
+                        <div class="row justify-content-center">
+                            Dinner Planner
+                        </div>
+
+                    </h1>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!--For Main Page-->
+        <div class="container-fluid" id="MainView">
+
+
+
+
+
+            <div class="container" id="WelcomePageView">
+
+
+                <div class="text-center p-5">
+
+                    <p class="lead">Lab 1 by Xiaoyun Zhang and Yu Zhang<br> Dinner planner Screen 01</p>
+
+                    <p class="p-2"></p>
+
+                    <button class="btn btn-primary btn-lg" id="CreatNewDinner">Creat New Dinner</button>
+
+                </div>
+
+
+            </div>
+            <div class="row">
+
+                <div class="col-md-3" style="float: left">
+
+
+
+                    <div id="SideBarView" style="display:none">
+                        <h3>
+                            My Dinner
+                        </h3>
+                        <span class="badge badge-default" id="people">People:
+                            <!--                            <div class="dropdown">-->
+                            <!--                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">-->
+
+                            <span id="numberOfGuests"> </span>
+
+                            <!--                                </button>-->
+                            <!--
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item disabled" href="#">1</a> <a class="dropdown-item" href="#">2</a>
+                                </div>
+-->
+                            <!--                            </div>-->
+
+                        </span>
+
+                        <div>
+                            <button id="minusGuest" class="btn"><span class="fa fa-minus"></span></button>
+                            <button id="plusGuest" class="btn"><span class="fa fa-plus"></span></button>
+
+                        </div>
+
+                        <table class="table table-sm" id="tablemenu">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Dish Name
+                                    </th>
+                                    <th>
+                                        Cost
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p style="float: right" id="totalprice">SEK 0.0</p>
+                        <button type="button" class="btn btn-block disabled btn-secondary">
+                            Confirm Dinner
+                        </button>
+                    </div>
+
+
+
+
+                </div>
+
+                <!--For the right part of the page-->
+                <div class="col-md-9" style="width: 100%" id="RightSidelView">
+
+
+                    <div id="DishSearchView" style="display:none">
+
+                        <h3 style="float: left my-3">
+                            Find A Dish
+                        </h3>
+
+                        <form role="form" class="form-inline" style="float: left">
+                            <div class="form-group px-2">
+                                <input type="searchlabel" class="form-control" id="searchlabel" placeholder="Enter Key Words" />
+                            </div>
+                            <select id="selectMenu" class="form-control">
+                                <option selected id="all">All</option>
+                                <option id="mainDish">main dish</option>
+                                <option id="starter">starter</option>
+                                <option id="starter">dessert</option>
+
+                            </select>
+                            <button type="button" class="btn btn-primary mx-2" id="searchBtn">
+                                Search
+                            </button>
+                        </form>
+
+                        <p class="p-4"></p>
+
+                        <div class="clearfix"></div>
+
+                        <!-- For the dish search result-->
+                        <div class="row " id="dishSearch">
+
+
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="row" id="DishDetailView" style="display:none">
+
+                        <div class="col-md-6">
+                            <div class="card" style="max-height: 40rem; max-width: 40rem;">
+                                <h5 class="card-title">MEETBALLS</h5>
+                                <img src="images/meatballs.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+
+                                    <p class="card-text">Preheat an oven to 400 degrees F (200 degrees C). Place the beef into a mixing bowl, and season with salt, onion, garlic salt, Italian seasoning, oregano, red pepper flakes, hot pepper sauce, and Worcestershire sauce; mix well. Add the milk, Parmesan cheese, and bread crumbs. Mix until evenly blended, then form into 1 1/2-inch meatballs, and place onto a baking sheet. Bake in the preheated oven until no longer pink in the center, 20 to 25 minutes.</p>
+                                    <a href="#" class="btn btn-primary">Back to research</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <h3 class="text-left">
+                                INGREDIENTS FOR 3 PEOPLE
+                            </h3>
+                            <table class="table" style="background-color: burlywood" id="tablemenu">
+                                <thead>
+
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+
+                            <button type="button" class="btn btn-md btn-primary">
+                                Add to menu
+                            </button>
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2>
+                                    Prepration
+                                </h2>
+                                <p>
+                                    Preheat an oven to 400 degrees F (200 degrees C). Place the beef into a mixing bowl, and season with salt, onion, garlic salt, Italian seasoning, oregano, red pepper flakes, hot pepper sauce, and Worcestershire sauce; mix well. Add the milk, Parmesan cheese, and bread crumbs. Mix until evenly blended, then form into 1 1/2-inch meatballs, and place onto a baking sheet. Bake in the preheated oven until no longer pink in the center, 20 to 25 minutes.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!--For payment view-->
+                <div class="row" style="display:none">
+                    <div class="container my-2">
+                        <h3 style="float: left" id="customernum">
+                        </h3>
+                        <button type="button" class="btn btn-primary" style="float: right">Go back</button>
+                    </div>
+                    <div class="container-fluid my-2 mb-4">
+                        <div class="row">
+                            <div class="col-md-2">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="card bg-default">
+                                            <div class="card-body">
+                                                <p class="card-text text-center">
+                                                    <img src="images/icecream.jpg">
+                                                </p>
+                                            </div>
+                                            <div class="card-footer text-center">
+                                                Icecream
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card bg-default">
+                                            <div class="card-body">
+                                                <p class="card-text text-center">
+                                                    <img src="images/meatballs.jpg">
+                                                </p>
+                                            </div>
+                                            <div class="card-footer text-center">
+                                                Meatballs
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card bg-default">
+                                            <div class="card-body">
+                                                <p class="card-text text-center">
+                                                    <img src="images/sourdough.jpg">
+                                                </p>
+                                            </div>
+                                            <div class="card-footer text-center">
+                                                Sourdough
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+
+                                <p>Total:</p>
+                                <span id="totalPrice"> </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container text-center my-2">
+                        <button type="button" class="btn btn-primary btn-lg">Creat New Dinner</button>
+
+
+                    </div>
+                </div>
+
+                <div class="row" style="display:none">
+                    <div class="container my-2">
+                        <h3 style="float: left">My Dinner : 3 People
+                        </h3>
+                        <button type="button" class="btn btn-primary" style="float: right">Go back</button>
+                    </div>
+                    <div class="container-fluid" style="border:1px solid">
+                        <div class="row">
+                            <div class="col-md-2 text-center">
+                                <img alt="Icecream" src="images/icecream.jpg" />
+                            </div>
+                            <div class="col-md-5">
+                                <h2>
+                                    Heading
+                                </h2>
+                                <p>
+                                    Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                                </p>
+                            </div>
+                            <div class="col-md-5">
+                                <h4>
+                                    Heading
+                                </h4>
+                                <p>
+                                    Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <script src="js/model/dinnerModel.js"></script>
+    <script src="js/view/SidebarView.js"></script>
+    <script src="js/view/DishitemView.js"></script>
+    <script src="js/view/DishSearchView.js"></script>
+    <script src="js/controller/WelcomePageViewController.js"></script>
+    <script src="js/controller/SideBarViewController.js"></script>
+    <script src="js/controller/DishSearchViewController.js"></script>
+    <script src="js/app.js"></script>
+
+
+</body>
+
+</html>

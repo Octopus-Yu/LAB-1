@@ -2,6 +2,7 @@ var DishitemView = function (dshID, model) {
 
 
     var dsh = model.getDish(dshID);
+
     var img = dsh.image;
     var dshName = dsh.name;
 
@@ -21,4 +22,4 @@ var DishitemView = function (dshID, model) {
     dshCardName.innerHTML = dshName;
 
 
-}
+};

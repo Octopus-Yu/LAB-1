@@ -1,22 +1,39 @@
-$(function () {
+class GeneralStateController {
+    constructor(view, model) {
+
+        this.view = view;
+        this.model = model;
+
+    }
+
+
+
+    hideWelcomePageView() {
+        var welcomePageView = this.view.querySelector("#WelcomePageView");
+        welcomePageView.style.display = "none";
+    }
+
+    showSideBarView() {
+        var sideBarView = this.view.querySelector("#SideBarView");
+        sideBarView.style.display = "block";
+    }
+
+    showDishSearchView() {
+        var dishSearchView = this.view.querySelector("#DishSearchView");
+        dishSearchView.style.display = "block";
+    }
+
+
+}
+
+window.onload = function () {
     //We instantiate our model
-    var model = new DinnerModel();
+    const model = new DinnerModel();
+    var dinnerPlannerView = document.getElementById("DinnerPlannerView");
+    var sideBarView = new SideBarView(dinnerPlannerView, model);
+    var dishSearchView = new DishSearchView(dinnerPlannerView, model);
+    var wellcomePageViewController = new WelcomePageViewController(dinnerPlannerView, model);
+    var sideBarViewController = new SideBarViewController(dinnerPlannerView, model);
+    var dishSearchViewController = new DishSearchViewController(dinnerPlannerView, model);
 
-    // And create the instance of ExampleView
-    //    var exampleView = new ExampleView($("#exampleView"), model);
-
-    //var interfaceView2 = new InterfaceView2($("#interfaceView2"), model);
-
-
-    var interfaceView3 = new InterfaceView3($("#interfaceView3"), model);
-    //var interfaceView4 = new InterfaceView4($("#interfaceView4"), model);
-    // var interfaceView5 = new InterfaceView5($("#interfaceView5"), model);
-
-    /**
-     * IMPORTANT: app.js is the only place where you are allowed to
-     * use the $('someSelector') to search for elements in the whole HTML.
-     * In other places you should limit the search only to the children 
-     * of the specific view you're working with (see exampleView.js).
-     */
-
-});
+}

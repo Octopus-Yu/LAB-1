@@ -9,18 +9,21 @@ class DinnerModel {
         // and selected dishes for the dinner menu
         this.customers = customersConst;
         this.menu = menuConst;
+        this._observers = [];
+
 
     }
 
-    //    setNumberOfGuests(num) {
-    //        //TODO Lab 1
-    //        this.customers.customernum = num;
-    //    }
+
+
+    setNumberOfGuests(num) {
+        this.customers[0].customernum = num;
+        this.notifyObservers();
+    }
     //
-    //    getNumberOfGuests() {
-    //        //TODO Lab 1
-    //        return this.customers.customernum = num;
-    //    }
+    getNumberOfGuests() {
+        return this.customers[0].customernum;
+    }
 
     //Returns the dish that is on the menu for selected type 
     getSelectedDish(type) {
@@ -30,17 +33,6 @@ class DinnerModel {
 
     //Returns all the dishes on the menu.
     getFullMenu() {
-        //TODO Lab 1
-        //        var i = this.menu.length;
-        //        while (i– - ) {
-        //            fn(this.menu[i]);
-        //         menu.push(getDish(1));
-        //         menu.push(getDish(2));
-        //         menu.push(getDish(2));
-
-
-
-
 
 
     }
@@ -89,8 +81,7 @@ class DinnerModel {
     //Adds the passed dish to the menu. If the dish of that type already exists on the menu
     //it is removed from the menu and the new one added.
     addDishToMenu(id) {
-        //TODO Lab 1 
-        //            menu.push(getDish(id));
+        menu.push(getDish(id));
     }
 
     //Removes dish from menu
@@ -117,8 +108,13 @@ class DinnerModel {
                 }
             }
             return dish.type == type && found;
+
         });
     }
+
+    
+
+
 
     //function that returns a dish of specific ID
     getDish(id) {
@@ -129,7 +125,34 @@ class DinnerModel {
         }
         return undefined;
     }
+
+
+
+    /*****************************************  
+    	      Observable implementation    
+    	*****************************************/
+
+
+
+    addObserver(observer) {
+        this._observers.push(observer);
+    }
+
+    notifyObservers(arg) {
+        arg = new DinnerModel();
+        for (var i = 0; i < this._observers.length; i++) {
+            this._observers[i].update(arg);
+        }
+    }
+
 }
+
+
+
+
+
+
+
 
 // the dishes constant contains an array of all the 
 // dishes in the database. Each dish has id, name, type,
