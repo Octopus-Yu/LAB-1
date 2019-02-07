@@ -3,47 +3,23 @@ Interaction Programing - Lab assignment 1 - HTML
 
 This project contains the startup code for HTML version of the Interaction Programing course lab assignment. For more details on how to complete the assignment follow the instructions on the [course website](https://www.kth.se/social/course/DH2642).
 
-This is Yu and Xiaoyun's project for lab 2.
-We achieve the controlller and observer pattern in the first and cecond page. Now, you can use the 
+This is Yu and Xiaoyun's project for lab 2. This is a updated version after the seminar.
+We achieve the controlller and observer pattern in the whole web page.
+We have present the Lab2 successfully.
 
 
 
 What's in the project
 -----
 
-
-####Current being used file:
-
-*DinnerPlanner.html  The only html file used in this project.
-
-*js/model/dinnerModel.js - is JavaScript file that contains the model code. The file contains the model (dish, ingredient and general dinner model) as well as methods and comments that you need to fully implement to support the dinner functionalities (guests, selected dishes, etc.)   Now, it has a _observers array to store the observers information as a observeral subject. Also, there are addObserver(observer) function and notifyObservers(arg) function to support the observeral features.
-
-*js/view/ - Folder containing views
-
-*js/app.js- this is the overall code of the application. It is responsible for initial setup of the app (when the page loads for the first time).  Besides that, the  GeneralStateController class is achieved here.
-
-*images/ - folder contains some pictures you can use for your dishes
-
-*XYYCSS.cssCss files for the style.
-
-*DishitemView   View for dish item.
-
-*SidebarView   Side bar view code. It is a observer to the dinnerModel data by using the "model.addObserver(this);" and wirte the update function to dynamic update the side bar view with the change of the data(Now, maily the menu content like price changed with the number of guests changed by clicking the + - buttons. )
-
-*DishSearchView   view of showing the dish search result
-
-*DishSearchViewController.js  File used to control the dish search view by using listener event. In this file, there is a controller class to listen to the search button and drop down form to select the category of dies. The dish search view will dynamic change with these buttons. For example, click the drop down form and choose "dessert" ,the dish search view will change and there will be the result listing all the dessert of the menu.
-
-*SideBarViewController.js    File used to control the sidebar view.  In this file, there is a controller class to listen the plusGuestBtn click event and minusGuestBtn click event. It will change the data in model.
-
-*WelcomePageViewController.js  File used to control the welcom page.  In this file, there is a controller to listen to the click event of the "CreatNewDinner" button to switch the display of view to change the page content. Also, generalStateController is used to show or hide views there.
-
-
-
-####Old files whihc may be used in the future:
-
+* [index.html](https://github.com/Octopus-Yu/LAB-1/blob/Lab1UpdatedVersion/dinnerplanner-html-master/index.html) - the only HTML page you will have in this project (though while testing you can create more to make it easier). You will need to implement the skeleton of the layout there and then through code (JavaScript) create the rest
+* [js/model/dinnerModel.js](https://github.com/Octopus-Yu/LAB-1/blob/Lab1UpdatedVersion/dinnerplanner-html-master/js/model/dinnerModel.js) - is JavaScript file that contains the model code. The file contains the model (dish, ingredient and general dinner model) as well as methods and comments that you need to fully implement to support the dinner functionalities (guests, selected dishes, etc.)
+* [js/view/](https://github.com/Octopus-Yu/LAB-1/tree/Lab1UpdatedVersion/dinnerplanner-html-master/js/view) - here you can find a JavaScript code of an example view. The view sets up some initial components and their values.
+* [js/app.js](https://github.com/Octopus-Yu/LAB-1/blob/Lab1UpdatedVersion/dinnerplanner-html-master/js/app.js) - this is the overall code of the application. It is responsible for initial setup of the app (when the page loads for the first time). 
+* [images/](https://github.com/Octopus-Yu/LAB-1/tree/Lab1UpdatedVersion/dinnerplanner-html-master/images) - folder contains some pictures you can use for your dishes
 * [Screen1-6.html](https://github.com/Octopus-Yu/LAB-1/blob/Lab1UpdatedVersion/dinnerplanner-html-master/Screen1.html) Html layout code for the web lab1 project.
+* [XYYCSS.css](https://github.com/Octopus-Yu/LAB-1/blob/Lab1UpdatedVersion/dinnerplanner-html-master/XYYCSS.css)Css files for the style.
 * [InterfaceView2-5](https://github.com/Octopus-Yu/LAB-1/blob/Lab1UpdatedVersion/dinnerplanner-html-master/js/view/InterfaceView2.js) Javascript code for each page view
-*index.html - the only HTML page you will have in this project (though while testing you can create more to make it easier). You will need to implement the skeleton of the layout there and then through code (JavaScript) create the rest
-*ExampleView  the example view file.
+* [DishitemView](https://github.com/Octopus-Yu/LAB-1/blob/Lab1UpdatedVersion/dinnerplanner-html-master/js/view/DishitemView.js) View for dish item
+* [SidebarView](https://github.com/Octopus-Yu/LAB-1/blob/Lab1UpdatedVersion/dinnerplanner-html-master/js/view/SidebarView.js) Side bar view code.
 

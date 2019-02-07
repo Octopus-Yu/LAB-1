@@ -1,10 +1,12 @@
-var DishitemView = function (dshID, model) {
-
+var DishitemView = function (dshID, model, container, app) {
 
     var dsh = model.getDish(dshID);
 
     var img = dsh.image;
     var dshName = dsh.name;
+    this.app = app;
+
+    var dishitemViewController = new DishitemViewController(container, model, app);
 
 
     this.div = document.createElement('DIV');
@@ -21,5 +23,7 @@ var DishitemView = function (dshID, model) {
     dshCardName.className = "card-text text-center";
     dshCardName.innerHTML = dshName;
 
+    this.div.addEventListener("click", () => dishitemViewController.clickEvent(dsh, container, model));
 
-};
+
+}

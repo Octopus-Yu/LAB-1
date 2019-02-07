@@ -1,18 +1,12 @@
 class WelcomePageViewController {
-    constructor(view, model) {
+    constructor(view, model, app) {
 
-        var generalStateController = new GeneralStateController(view, model);
+        // var generalStateController = new GeneralStateController(view, model);
 
         this.creatNewDinnerBtn = view.querySelector("#CreatNewDinner");
 
         this.creatNewDinnerBtn.addEventListener("click",
-            () => generalStateController.showDishSearchView());
-        this.creatNewDinnerBtn.addEventListener("click",
-            () => generalStateController.showSideBarView());
+            () => app.creatNewDinner());
 
-        this.creatNewDinnerBtn.addEventListener("click",
-            () => generalStateController.hideWelcomePageView());
-        //        view.minusButton.addEventListener("click",
-        //            () => model.setNumberOfGuests(model.getNumberOfGuests() - 1));
     }
 }
