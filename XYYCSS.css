@@ -1,0 +1,21 @@
+ContainerAll {
+    margin: auto;
+    float: left;
+}
+
+
+oncenter {
+    margin: auto;
+    display: block;
+}
+
+
+/*html, body, .grid-container { height: 100%; margin: 0; }*/
+
+
+imgbakedbrie {
+    height: 70 px;
+    width: 70 px;
+    background-image: url(dinnerplanner-html-master/images/bakedbrie.jpg);
+    background-size: 100% 100%;
+}
