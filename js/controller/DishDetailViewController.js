@@ -24,7 +24,8 @@ class DishDetailViewController {
     viewUpdate() {
 
         var dshName = this.view.querySelector("#dshName");
-        var dishName = dshName.innerHTML;
+        var dishName = dshName.innerText;
+        //console.log(dishName);
         var dshId = this.model.getDishid(dishName);
         this.model.addDishToMenu(dshId);
 

@@ -18,7 +18,7 @@ window.onload = function () {
     var dinnerPlannerView = document.getElementById("DinnerPlannerView");
     var sideBarView = new SideBarView(dinnerPlannerView, model);
     this.dishSearchView = new DishSearchView(dinnerPlannerView, model, this);
-    //this.dishDetailView = new DishDetailView(dsh, dinnerPlannerView, model, this);
+    this.dishDetailView = new DishDetailView(dsh, dinnerPlannerView, model, this);
     var paymentView = new PaymentView(dinnerPlannerView, model, this);
     var recipeView = new RecipeView(dinnerPlannerView, model, this);
 
@@ -47,14 +47,7 @@ window.onload = function () {
         paymentView.style.display = "none";
         var recipeView = dinnerPlannerView.querySelector("#recipeView");
         recipeView.style.display = "none";
-
-
     }
-
-    //    hideWelcomePageView() {
-    //        var welcomePageView = this.view.querySelector("#WelcomePageView");
-    //        welcomePageView.style.display = "none";
-    //    }
 
 
     showSideBarView = () => {
@@ -137,15 +130,22 @@ window.onload = function () {
         searchLoading.style.display = "none";
         dishSearch.style.display = "none";
         searchnoResults.style.display = "";
-
-
-
     }
 
 
+    this.detailDishesStart = () => {
+        var detailLoading = dinnerPlannerView.querySelector("#detailLoading");
+        var dishDetail = dinnerPlannerView.querySelector("#dishDetail");
 
+        detailLoading.style.display = "";
+        dishDetail.style.display = "none";
 
+    }
+    this.detailDishesEnd = () => {
+        var detailLoading = dinnerPlannerView.querySelector("#detailLoading");
+        var dishDetail = dinnerPlannerView.querySelector("#dishDetail");
 
-
-
+        detailLoading.style.display = "none";
+        dishDetail.style.display = "";
+    }
 }

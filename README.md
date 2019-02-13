@@ -3,7 +3,7 @@ Interaction Programing - Lab assignment 3 - HTML
 
 This project contains the startup code for HTML version of the Interaction Programing course lab assignment. For more details on how to complete the assignment follow the instructions on the [course website](https://www.kth.se/social/course/DH2642).
 
-This is Yu and Xiaoyun's project for lab 3. Now the data is from dynamic onling database and we use fetch() to get the data by the API https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search? . In this way, you can search the dish by type or using the keyword or just combine them two to search a group of dishes. Now, the number of result is setted as 20 in the view. And we use the feature of asynchronous loading to achieve the show and hide loading page when searching in the dish search view. There will be a loading sprinner view showed when loading the data from the web and after the data is accessed, the result will be showed and the loading sprinner view will be hidden. Notice, the API_KEY.js is saved in .git file.
+This is Yu and Xiaoyun's project for lab 3. All the functions of dynamic data has been achieved in this version. Now the data is from dynamic onling database and we use fetch() to get the data by the API https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search? . In this way, you can search the dish by type or using the keyword or just combine them two to search a group of dishes. You can check the dish detail to see the ingredient and pricr information and add it to the menu and confirm it. Now, the number of result is setted as 20 in the view. And we use the feature of asynchronous loading to achieve the show and hide loading page when searching in the dish search view. There will be a loading sprinner view showed when loading the data from the web and after the data is accessed, the result will be showed and the loading sprinner view will be hidden. Notice, the API_KEY.js is saved in .git file.
 
 
 
@@ -55,5 +55,4 @@ What's in the project
 
 #### Old files whihc may be used in the future:
 
-Screen1-6.html Html layout code for the web lab1 project.
-*InterfaceView2-5 Javascript code for each page view *index.html - the only HTML page you will have in this project (though while testing you can create more to make it easier). You will need to implement the skeleton of the layout there and then through code (JavaScript) create the rest *ExampleView the example view file.
+Old files has been removed now.

@@ -10,33 +10,17 @@
          this.paymenDetail = container.querySelector("#paymentDetail");
          this.total = container.querySelector("#paymentViewTotal");
          this.cuntomerNumber = container.querySelector("#paymentNumber");
-
-
-
-
-
-
-
-
-
      }
 
-     update(model) {
-
-
+     update() {
 
          while (this.paymenDetail.firstChild) {
 
              this.paymenDetail.removeChild(this.paymenDetail.firstChild);
-
          }
 
+         var menu = this.model.getFullMenu();
 
-
-
-         var menu = model.getFullMenu();
-
-         //alert("new" + this.currentDishes.length);
          for (let dsh of menu) {
              var dshID = dsh.id;
 
@@ -47,18 +31,8 @@
 
 
          }
-         //alert(this.total.id);
-         //alert(model.getTotalMenuPrice());
-         this.total.innerHTML = "Total: " + model.getTotalMenuPrice() + " SEK";
-         this.cuntomerNumber.innerHTML = "My Dinner : " + model.getNumberOfGuests() + " People";
+
+         this.total.innerHTML = "Total: " + this.model.getTotalMenuPrice() + " SEK";
+         this.cuntomerNumber.innerHTML = "My Dinner : " + this.model.getNumberOfGuests() + " People";
      }
-
-
-
-
-
-
-
-
-
  }

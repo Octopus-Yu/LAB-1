@@ -18,14 +18,6 @@
 <body>
     <div id="DinnerPlannerView">
 
-
-        <!--For Web Top Title-->
-        <!--
-        <div class="p-2 text-center" style="background-color: lightgrey">
-            <h1>Dinner Planner</h1>
-        </div>
--->
-
         <div class="row">
             <div class="col-md-12">
                 <div class="jumbotron">
@@ -75,18 +67,8 @@
                             My Dinner
                         </h3>
                         <span class="badge badge-default" id="people">People:
-                            <!--                            <div class="dropdown">-->
-                            <!--                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">-->
 
                             <span id="numberOfGuests"> </span>
-
-                            <!--                                </button>-->
-                            <!--
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item disabled" href="#">1</a> <a class="dropdown-item" href="#">2</a>
-                                </div>
--->
-                            <!--                            </div>-->
 
                         </span>
 
@@ -131,8 +113,6 @@
 
                 <!--For the right part of the page-->
                 <div class="col-md-9" style="width: 100%" id="RightSidelView">
-
-                    <!--                                <div class="col-md-9" style="width: 100%;height:900px;overflow-y:auto" id="RightSidelView">-->
 
 
                     <div id="DishSearchView" style="display:none">
@@ -190,7 +170,7 @@
                         </div>
                         <div id="searchnoResults" style="display: none">
                             <p>
-                                Oop! There is no reslutls found. Try to search with other keywords or dish types!
+                                Oops! There is no reslutls found. Try to search with other keywords or dish types!
                             </p>
 
                         </div>
@@ -209,17 +189,56 @@
 
                     <div class="row" id="DishDetailView" style="display:none">
 
-                        <div class="col-md-6">
-                            <div class="card" style="max-height: 40rem; max-width: 40rem;">
-                                <h5 class="card-title" id="dshName">MEETBALLS</h5>
-                                <img src="images/meatballs.jpg" class="card-img-top" alt="..." id="dshImage">
-                                <div class="card-body">
-
-                                    <p class="card-text" id="dshDescription">Preheat an oven to 400 degrees F (200 degrees C). Place the beef into a mixing bowl, and season with salt, onion, garlic salt, Italian seasoning, oregano, red pepper flakes, hot pepper sauce, and Worcestershire sauce; mix well. Add the milk, Parmesan cheese, and bread crumbs. Mix until evenly blended, then form into 1 1/2-inch meatballs, and place onto a baking sheet. Bake in the preheated oven until no longer pink in the center, 20 to 25 minutes.</p>
-                                    <a href="#" class="btn btn-primary" id="backtoSearch">Back to research</a>
-                                </div>
+                        <div id="detailLoading" styly="display:none">
+                            <div class="spinner-grow text-primary" role="status">
+                                <span class="sr-only">Loading...</span>
                             </div>
+                            <div class="spinner-grow text-secondary" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-grow text-success" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-grow text-danger" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-grow text-warning" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-grow text-info" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-grow text-light" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-grow text-dark" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+
                         </div>
+
+                        <!-- For the dish detail result-->
+                        <div class="row " id="dishDetail" style="display:none">
+
+                        <div class="col-md-6">
+
+                            
+
+                        
+
+                    <div class="card" style="max-height: 40rem; max-width: 40rem;">
+                    <h5 class="card-title" id="dshName">MEETBALLS</h5>
+                    <img src="images/meatballs.jpg" class="card-img-top" alt="..." id="dshImage">
+                    <div class="card-body">
+
+                     <p class="card-text" id="dshDescription">Preheat an oven to 400 degrees F (200 degrees C). Place the beef into a mixing bowl, and season with salt, onion, garlic salt, Italian seasoning, oregano, red pepper flakes, hot pepper sauce, and Worcestershire sauce; mix well. Add the milk, Parmesan cheese, and bread crumbs. Mix until evenly blended, then form into 1 1/2-inch meatballs, and place onto a baking sheet. Bake in the preheated oven until no longer pink in the center, 20 to 25 minutes.</p>
+                     <a href="#" class="btn btn-primary" id="backtoSearch">Back to research</a>
+                         </div>
+                         </div>
+                         </div>
+
+                        
+                            
 
                         <div class="col-md-6">
 
@@ -240,20 +259,8 @@
                             </button>
 
                         </div>
+                        </div>
 
-
-
-                        <!--
-<div class="row">
-    <div class="col-md-12">
-        <h2>
-            Prepration
-        </h2>
-        <p>
-            Preheat an oven to 400 degrees F (200 degrees C). Place the beef into a mixing bowl, and season with salt, onion, garlic salt, Italian seasoning, oregano, red pepper flakes, hot pepper sauce, and Worcestershire sauce; mix well. Add the milk, Parmesan cheese, and bread crumbs. Mix until evenly blended, then form into 1 1/2-inch meatballs, and place onto a baking sheet. Bake in the preheated oven until no longer pink in the center, 20 to 25 minutes.</p>
-    </div>
-</div>
--->
                     </div>
 
 
